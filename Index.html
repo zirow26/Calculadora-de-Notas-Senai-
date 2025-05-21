@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+        <div class="perguntas">
+          <div class="pergunta">
+            <h2>
+              Avaliação 1:
+            </h2>
+            <input type="Number" id="av1">
+          </div>
+            <div class="pergunta">
+              <h2>
+              Avaliação 2:
+            </h2>
+            <input type="Number" id="av2">
+          </div>
+            <div class="pergunta">
+              <h2>
+              Avaliação 3:
+            </h2>
+            <input type="Number" id="av3">
+          </div>
+            <div class="pergunta">
+              <h2>
+              EDAG:
+            </h2>
+            <input type="Number" id="edag">
+          </div>
+            <div class="pergunta">
+              <h2>
+              Qual é a Prova que está faltando?
+            </h2>
+            <input type="list" list="up" id="esc">
+          </div>
+            <datalist id ="up">
+              <option value="1">AV1</option>
+              <option value="2">AV2</option>
+              <option value="3">AV3</option>
+              <option value="4">EDAG</option>
+            </datalist>
+        </div>
+        <button onclick="cal()">
+          Calcular a Nota
+        </button>
+        <h3 id="res">
+          Nota Que Falta
+        </h3>
+    </main>
+  </body>
+</html>
