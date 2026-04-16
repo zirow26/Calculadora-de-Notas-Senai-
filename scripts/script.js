@@ -1,44 +1,26 @@
 function cal(){
-  let av1 = document.getElementById("av1").value;
-  let av2 = document.getElementById("av2").value;
-  let av3 = document.getElementById("av3").value;
+  let av1 = document.getElementById("nota1").value;
+  let av2 = document.getElementById("nota2").value;
+  let av3 = document.getElementById("nota3").value;
   let edag = document.getElementById("edag").value;
-  let prova = document.getElementById("esc").value;
-  let res;
-  if(prova == 1){
-    res = (70-(av2*2.5)-(av3*3)-(edag*2))/2.5
-    res =res.toFixed(2);
-     if(res > 0){
-    document.getElementById("res").innerHTML = "Precisa tirar "+res+" pontos na "+prova+"º prova para passar";
-    }else{
-      document.getElementById("res").innerHTML = "Já Passou";
-    }
+  if(av1==""){
+    av1=0;
   }
-  if(prova == 2){
-    res = (70-(av1*2.5)-(av3*3)-(edag*2))/2.5
-    res =res.toFixed(2);
-    if(res > 0){
-    document.getElementById("res").innerHTML = "Precisa tirar "+res+" pontos na "+prova+"º prova para passar";
-    }else{
-      document.getElementById("res").innerHTML = "Já Passou";
-    }
+  if(av2==""){
+    av2=0;
   }
-  if(prova == 3){
-    res = (70-(av2*2.5)-(av1*2.5)-(edag*2))/3
-    res =res.toFixed(2);
-    if(res > 0){
-    document.getElementById("res").innerHTML = "Precisa tirar "+res+" pontos na "+prova+"º prova para passar";
-    }else{
-      document.getElementById("res").innerHTML = "Já Passou";
-    }
+  if(av3==""){
+    av3=0;
   }
-  if(prova == 4){
-    res = (70-(av2*2.5)-(av3*3)-(av1*2.5))/2
-    res =res.toFixed(2);
-    if(res > 0){
-    document.getElementById("res").innerHTML = "Precisa tirar "+res+" pontos na "+prova+"º prova para passar";
-    }else{
-      document.getElementById("res").innerHTML = "Já Passou";
-    }
+  if(edag==""){
+    edag=0;
   }
-}
+
+  let media = (av1*2.5)+(av2*2.5)+(av3*3)+(edag*2);
+  console.log(media);
+  if (media>=70){
+    document.getElementById("resultado").innerHTML = "Parabéns, você foi aprovado com a média: " + (media.toFixed(2))/10;
+  }else{
+    document.getElementById("resultado").innerHTML = "Você precisa de " + ((70-media).toFixed(2))/10 + " pontos para ser aprovado.";
+  }
+}  

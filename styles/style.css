@@ -1,44 +1,92 @@
-@media (max-width: 1200px) {
-  body {
-    padding: 100px 10px;
-  }
-  .perguntas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  main {
-    width: 90%;
-  }
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+html,body{
+  max-width:100%;
+  height:100%;
 }
 
 body{
   width:100%;
-  padding:200px 20px;
-  gap:30px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  background:radial-gradient(circle,red,yellow,orange);
+  height:100%;
+  background: linear-gradient(to bottom, #052977, #050666);
   overflow-x: hidden;
 }
-.perguntas{
-  display:flex;
-  gap:20px;
-  width: auto;
-  padding:15px;
-}
-main {
-  background-color:rgb(221, 206, 206);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
+
+.formulario{
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1.5em;
+  margin: 0 auto;
+  background:#8A00C4;
+  border-radius: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .pergunta{
-    border-left: solid 4px black;
-    border-right: solid 4px black;
-    padding:10px;
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.01em;
+}
+.pergunta label{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.pergunta input{
+  width:100%;
+  height: 2em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+  border-bottom: black 0.3em solid;
+  background: rgba(255, 255, 255, 0.096);
+}
+.pergunta input:focus{
+  outline: none;
+  border-bottom: #053cb3 0.3em solid;
+}
+
+.formulario button{
+  width: 50%;
+  height: 2.5em;
+  border: none;
+  border-radius: 1em;
+  background: #053cb3;
+  color: azure;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+}
+.resultado{
+  width: 60vw;
+  height: 50vh;
+  background-color: bisque;
+}
+
+.resultado h2{
+  font-size: 2em;
+  color: black;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+
+@media (max-width: 768px) {
+  .formulario{
+    width: 80%;
+    padding: 1em;
+  }
+ 
 }
