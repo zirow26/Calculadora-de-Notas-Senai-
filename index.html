@@ -7,27 +7,71 @@
     <script src="scripts\script.js" defer></script>
   </head>
   <body>
-    <section class="formulario">
-      <h2>Calculadora de Notas</h2>
-      <div class="pergunta">
-        <label for="nota1">Nota 1:</label><br>
-        <input type="number" id="nota1" />
-      </div>
-      <div class="pergunta">
-        <label for="nota2">Nota 2:</label><br>
-        <input type="number" id="nota2" />
-      </div>
-      <div class="pergunta">
-        <label for="nota3">Nota 3:</label><br>
-        <input type="number" id="nota3" />
-      </div>
-      <div class="pergunta">
-        <label for="edag">EDAG:</label><br>
-        <input type="number" id="edag" />
-      </div>
-      <button id="act-button" onclick="cal()" popovertarget="popup">Calcular a Nota</button>
+    <section class="CalMedia">
+      <section class="Cal-display">
+        <h2>Calculadora de Notas</h2>
+        <div class="pergunta">
+          <label for="nota11">Nota 1:</label><br>
+          <input type="number" id="nota11" />
+        </div>
+        <div class="pergunta">
+          <label for="nota21">Nota 2:</label><br>
+          <input type="number" id="nota21" />
+        </div>
+        <div class="pergunta">
+          <label for="nota31">Nota 3:</label><br>
+          <input type="number" id="nota31" />
+        </div>
+        <div class="pergunta">
+          <label for="edag1">EDAG:</label><br>
+          <input type="number" id="edag1" />
+        </div>
+        <button id="act-button" onclick="calMedia()" popovertarget="popup">Calcular a Nota</button>
+        
+      </section>
+    </section>
+    <section class="CalAV3">
+      <section class="Cal-display">
+        <h2>Calculadora de Notas</h2>
+        <div class="pergunta">
+          <label for="nota12">Nota 1:</label><br>
+          <input type="number" id="nota12" />
+        </div>
+        <div class="pergunta">
+          <label for="nota22">Nota 2:</label><br>
+          <input type="number" id="nota22" />
+        </div>
+        <div class="pergunta">
+          <label for="edag2">EDAG:</label><br>
+          <input type="number" id="edag2" />
+        </div>
+        <button id="act-button" onclick="calAv3()" popovertarget="popup">Calcular a Nota</button>
+      </section>
+    </section>
+    <section class="CalFinal">
+      <section class="Cal-display">
+        <h2>Calculadora de Notas</h2>
+        <div class="pergunta">
+          <label for="nota13">Nota 1:</label><br>
+          <input type="number" id="nota13" />
+        </div>
+        <div class="pergunta">
+          <label for="nota23">Nota 2:</label><br>
+          <input type="number" id="nota23" />
+        </div>
+        <div class="pergunta">
+          <label for="nota33">Nota 3:</label><br>
+          <input type="number" id="nota33" />
+        </div>
+        <div class="pergunta">
+          <label for="edag3">EDAG:</label><br>
+          <input type="number" id="edag3" />
+        </div>
+        <button id="act-button" onclick="calFinal()" popovertarget="popup">Calcular a Nota</button>
+      </section>
     </section>
     <div class="resultado" id="popup" popover="auto">
+      <h1 style="text-align: center; color: black;">Resultado:</h1>
       <h2 id="resultado"></h2>        
     </div>
   </body>

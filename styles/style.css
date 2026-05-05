@@ -15,7 +15,19 @@ body{
   overflow-x: hidden;
 }
 
-.formulario{
+
+.CalMedia{
+  display: none;
+}
+.CalAV3{
+display: none;
+}
+.CalFinal{
+  display: block;
+}
+
+/*display daCalculadora*/
+.Cal-display{
   width: 40%;
   text-align: center;
   display: flex;
@@ -31,18 +43,18 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.pergunta{
+.Cal-display .pergunta{
   width:80%;
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 0.01em;
 }
-.pergunta label{
+.Cal-display .pergunta label{
   font-size: 1.2em;
   font-weight: bold;
 }
-.pergunta input{
+.Cal-display .pergunta input{
   width:100%;
   height: 2em;
   padding: 0.5em;
@@ -52,12 +64,11 @@ body{
   border-bottom: black 0.3em solid;
   background: rgba(255, 255, 255, 0.096);
 }
-.pergunta input:focus{
+.Cal-display .pergunta input:focus{
   outline: none;
   border-bottom: #053cb3 0.3em solid;
 }
-
-.formulario button{
+.Cal-display button{
   width: 50%;
   height: 2.5em;
   border: none;
@@ -71,10 +82,15 @@ body{
 }
 .resultado{
   width: 60vw;
-  height: 50vh;
+  height: 60vh;
   background-color: bisque;
+  border: #053cb3 0.3em solid;
+  border-radius: 2em;
 }
-
+.resultado::backdrop{
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
 .resultado h2{
   font-size: 2em;
   color: black;
@@ -82,9 +98,10 @@ body{
   padding-top: 20vh;
 }
 
+/*Calculo da Av3*/
 
 @media (max-width: 768px) {
-  .formulario{
+  .CalMedia{
     width: 80%;
     padding: 1em;
   }
