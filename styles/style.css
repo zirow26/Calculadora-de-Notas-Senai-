@@ -1,44 +1,158 @@
-@media (max-width: 1200px) {
-  body {
-    padding: 100px 10px;
-  }
-  .perguntas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  main {
-    width: 90%;
-  }
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+html,body{
+  max-width:100%;
+  height:100%;
 }
 
 body{
   width:100%;
-  padding:200px 20px;
-  gap:30px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  background:radial-gradient(circle,red,yellow,orange);
+  height:100%;
+  background: linear-gradient(to bottom, #052977, #050666);
   overflow-x: hidden;
 }
-.perguntas{
-  display:flex;
-  gap:20px;
-  width: auto;
-  padding:15px;
+
+.seletor{
+  width: fit-content;
+  height: fit-content;
+  background: #8A00C4;
+  padding : 2em;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap:1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-main {
-  background-color:rgb(221, 206, 206);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
+.seletor div {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.pergunta{
-    border-left: solid 4px black;
-    border-right: solid 4px black;
-    padding:10px;
+.seletor button {
+  width: 15em;
+  height: 3em;
+  padding: 0.3em 1em;
+  margin: 0.5em;
+  border: none;
+  border-radius: 1em;
+  background: #053cb3;
+  color: azure;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+}
+
+.calMedia{
+  display: none;
+}
+.calAV3{
+display: none;
+}
+.calFinal{
+  display: none;
+}
+
+/*display da Calculadora*/
+.cal-display{
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1.5em;
+  margin: 0 auto;
+  background:#8A00C4;
+  border-radius: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cal-display .return{
+  width:5em;
+  height:3.5em;
+  position: absolute;
+  top: 1em;
+  left: 1.5em;
+  background-color: transparent;
+  color: rgb(8, 3, 3);
+  border: none;
+  cursor: pointer;
+}
+.cal-display .pergunta{
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.01em;
+}
+.cal-display .pergunta label{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.cal-display .pergunta input{
+  width:100%;
+  height: 2em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+  border-bottom: black 0.3em solid;
+  background: rgba(255, 255, 255, 0.096);
+}
+.cal-display .pergunta input:focus{
+  outline: none;
+  border-bottom: #053cb3 0.3em solid;
+}
+.cal-display button:not(:first-child){
+  width: 50%;
+  height: 2.5em;
+  border: none;
+  border-radius: 1em;
+  background: #053cb3;
+  color: azure;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+}
+.resultado{
+  width: 60vw;
+  height: fit-content;
+  padding: 2em;
+  background-color: bisque;
+  border: #053cb3 0.3em solid;
+  border-radius: 2em;
+}
+.resultado::backdrop{
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+.resultado h2{
+  font-size: 2em;
+  color: black;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+
+
+@media (max-width: 768px) {
+  .cal-display {
+    width: 80%;
+    padding: 1em;
+  }
+ 
 }
