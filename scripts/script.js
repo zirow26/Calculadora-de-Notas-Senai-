@@ -1,3 +1,35 @@
+function mostrarCalMedia(){
+  document.querySelector(".calMedia").style.display = "block";
+  document.querySelector(".calAV3").style.display = "none";
+  document.querySelector(".calFinal").style.display = "none";
+  document.querySelector(".seletor").style.display = "none";
+}
+
+function mostrarCalAV3(){
+  document.querySelector(".calMedia").style.display = "none";
+  document.querySelector(".calAV3").style.display = "block";
+  document.querySelector(".calFinal").style.display = "none";
+  document.querySelector(".seletor").style.display = "none";
+}
+
+function mostrarCalFinal(){
+  document.querySelector(".calMedia").style.display = "none";
+  document.querySelector(".calAV3").style.display = "none";
+  document.querySelector(".calFinal").style.display = "block";
+  document.querySelector(".seletor").style.display = "none";
+}
+function voltar(){
+  document.querySelector(".calMedia").style.display = "none";
+  document.querySelector(".calAV3").style.display = "none";
+  document.querySelector(".calFinal").style.display = "none";
+  document.querySelector(".seletor").style.display = "block";
+}
+
+function limpar(){
+  document.querySelectorAll("input[type='number']").forEach(input => {
+    input.value = "";
+  });
+}
 function calMedia(){
   let av1 = document.getElementById("nota11").value;
   let av2 = document.getElementById("nota21").value;
@@ -15,14 +47,11 @@ function calMedia(){
   if(edag==""){
     edag=0;
   }
-
-  let media = (av1*2.5)+(av2*2.5)+(av3*3)+(edag*2);
+  console.log(av1+"+"+av2+"+"+av3+"+"+edag);
+  let media = (((av1*2.5)+(av2*2.5)+(av3*3)+(edag*2))/10);
   console.log(media);
-  if (media>=70){
-    document.getElementById("resultado").innerHTML = "Parabéns, você foi aprovado com a média: " + (media.toFixed(2))/10;
-  }else{
-    document.getElementById("resultado").innerHTML = "Você precisa de " + ((70-media).toFixed(2))/10 + " pontos para ser aprovado.";
-  }
+  document.getElementById("resultado").innerHTML = "Sua média atual: " + (media.toFixed(2));
+  limpar();
 }
 
 function calAv3(){
@@ -41,6 +70,7 @@ function calAv3(){
   }else{
     document.getElementById("resultado").innerHTML = "Você precisa de " + av3.toFixed(2) + " pontos para ser aprovado.";
   }
+  limpar();
 }  
 
 function calFinal(){
@@ -55,9 +85,10 @@ function calFinal(){
   });*/
   media = (av1*2.5)+(av2*2.5)+(av3*3)+(edag*2);
   console.log(av1+"+"+av2+"+"+av3+"+"+edag);
-  console.log(media);
   media = media/10;
+  console.log(media);
   res = (50-(6*media))/4;
   console.log(res);
   document.getElementById("resultado").innerHTML = "Você precisa de " + res.toFixed(2) + " pontos para ser aprovado na final.";
+  limpar();
 }
